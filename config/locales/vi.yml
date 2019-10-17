@@ -2,3 +2,32 @@ vi:
   hello: "Xin chào thế giới"
   en: "Tiếng Anh"
   vi: "Tiếng Việt"
+  app: "Ruby on Rails Tutorial Ứng dụng mẫu "
+  rails_tut: "hướng dẫn học Ruby on Rails"
+  static_pages:
+    home:
+      home: "Trang chủ"
+      home_intro: "Trang chủ của"
+      sample_app: "ứng dụng mẫu"
+    help:
+      help: "Trợ giúp"
+      help_rails: "Xem trợ giúp của Ruby on Rails Tutorial tại"
+      help_page: "trang hỗ trợ Rails Tutorial"
+      help_app_book: ".Để xem trợ giúp của ứng dụng mẫu này, đến"
+    about:
+      about: "Giới thiệu"
+      about_the: "Trang web"
+      about_part_of: ", một phần của"
+      about_learn: "Learn Enough"
+      about_is_a: ", là một"
+      book: "sách"
+      about_and: "và"
+      screencasts: "loạt video hướng dẫn"
+      about_teach_develop: "để dạy cách phát triển web với"
+      ruby_on_rails: "Ruby on Rails"
+      about_app_intro: "Đây là ứng dụng mẫu cho hướng dẫn đó."
+    contact:
+      contact: "Liên hệ "
+      contact_intro: "Liên hệ với Ruby on Rails Tutorial
+                      về ứng dụng mẫu này tại"
+      contact_page: "trang liên hệ"
