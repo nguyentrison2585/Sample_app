@@ -4,11 +4,16 @@ vi:
   vi: "Tiếng Việt"
   app: "Ruby on Rails Tutorial Ứng dụng mẫu "
   rails_tut: "hướng dẫn học Ruby on Rails"
+  news: "Tin tức"
+  about: "Giới thiệu"
+  contact: "Liên hệ"
   static_pages:
     home:
       home: "Trang chủ"
+      welcome: "Chào mừng đến với ứng dụng mẫu"
       home_intro: "Trang chủ của"
       sample_app: "ứng dụng mẫu"
+      home_signup: "Đăng ký ngay!"
     help:
       help: "Trợ giúp"
       help_rails: "Xem trợ giúp của Ruby on Rails Tutorial tại"
@@ -27,7 +32,11 @@ vi:
       ruby_on_rails: "Ruby on Rails"
       about_app_intro: "Đây là ứng dụng mẫu cho hướng dẫn đó."
     contact:
-      contact: "Liên hệ "
+      contact: "Liên hệ"
       contact_intro: "Liên hệ với Ruby on Rails Tutorial
                       về ứng dụng mẫu này tại"
       contact_page: "trang liên hệ"
+  users:
+    new:
+      signup: "Đăng ký"
+      signup_intro: "Đây sẽ là trang đăng ký cho người dùng mới."
