@@ -4,11 +4,16 @@ en:
   vi: "Vienamse"
   app: "Ruby on Rails Tutorial Sample App"
   rails_tut: "Ruby on Rails Tutorial"
+  news: "News"
+  about: "About"
+  contact: "Contact"
   static_pages:
     home:
       home: "Home"
+      welcome: "Welcome to the Simple App"
       home_intro: "This is the home page for the"
       sample_app: "sample application"
+      home_signup: "Sign up now!"
     help:
       help: "Help"
       help_rails: "Get help on the Ruby on Rails Tutorial at the"
@@ -31,3 +36,7 @@ en:
       contact_intro: "Contact the Ruby on Rails Tutorial about the
                       sample app at the"
       contact_page: "contact page"
+  users:
+    new:
+      signup: "Sign up"
+      signup_intro: "This will be a signup page for new users."
