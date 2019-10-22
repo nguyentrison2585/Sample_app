@@ -7,3 +7,7 @@ rubyonrails: "https://rubyonrails.org/"
 contact: "https://www.railstutorial.org/contact"
 micheal_hartl: "https://www.michealhartl.com/"
 news: "https://news.railstutorial.org/"
+max_length_name: 50
+max_length_email: 255
+min_length_pass: 6
+validates_email_regex: !ruby/regexp '/^([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})$/i'
