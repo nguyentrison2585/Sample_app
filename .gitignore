@@ -22,8 +22,9 @@
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
-/config/credentials.yml.en
-/config/databse.yml
+
+/config/credentials.yml.enc
+/config/database.yml
 
 config/settings.local.yml
 config/settings/*.local.yml
