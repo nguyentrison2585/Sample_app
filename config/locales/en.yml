@@ -10,8 +10,10 @@ en:
   contact: "Contact"
   news: "News"
   welcome: "Welcome to the Simple App"
+  new_user: "New user?"
   signup: "Sign up now!"
   login: "Log in"
+  invalid_login: "Invalid email/password combination"
   fail: "Fail to create account"
   name: "Name"
   password: "Password"
@@ -19,6 +21,11 @@ en:
   create: "Create my account"
   errors_size: "The form contains %{size} error"
   not_found: "Can not find the user"
+  user: "Users"
+  account: "Account"
+  profile: "Profile"
+  setting: "Settings"
+  logout: "Log out"
   static_pages:
     home:
       home_intro: "This is the home page for the"
