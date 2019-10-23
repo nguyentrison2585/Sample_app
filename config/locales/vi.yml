@@ -10,8 +10,10 @@ vi:
   contact: "Liên hệ"
   news: "Tin tức"
   welcome: "Chào mừng đến với ứng dụng mẫu"
+  new_user: "Người dùng mới?"
   signup: "Đăng ký ngay!"
   login: "Đăng nhập"
+  invalid_login: "Email hoặc mật khẩu không khớp"
   fail: "Tạo tài khoản không thành công"
   name: "Tên"
   password: "Mật khẩu"
@@ -19,6 +21,11 @@ vi:
   create: "Tạo tài khoản"
   errors_size: "Thông tin bạn điền %{size} lỗi"
   not_found: "Không tìm thấy người dùng"
+  user: "Người dùng"
+  account: "Tài khoản"
+  profile: "Thông tin"
+  setting: "Cài đặt"
+  logout: "Đăng xuất"
   static_pages:
     home:
       home_intro: "Trang chủ của"
