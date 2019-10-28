@@ -26,6 +26,8 @@ en:
   profile: "Profile"
   setting: "Settings"
   logout: "Log out"
+  remember: "Remember me on this computer"
+  remember_me: "Remember me"
   static_pages:
     home:
       home_intro: "This is the home page for the"

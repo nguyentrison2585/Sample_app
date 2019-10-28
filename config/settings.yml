@@ -11,3 +11,4 @@ max_length_name: 50
 max_length_email: 255
 min_length_pass: 6
 validates_email_regex: !ruby/regexp '/\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i'
+check_remembered: "1"
