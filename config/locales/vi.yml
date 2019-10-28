@@ -26,6 +26,8 @@ vi:
   profile: "Thông tin"
   setting: "Cài đặt"
   logout: "Đăng xuất"
+  remember: "Ghi nhớ tài khoản của tôi"
+  remember_me: "Ghi nhớ tôi"
   static_pages:
     home:
       home_intro: "Trang chủ của"
