@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-  before_acton :find_user, only: :create
+  before_action :find_user, only: :create
   def new; end
 
   def create
@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
       else
         forget @user
       end
-      redirect_to @user
+      redirect_back_or @user
     else
       flash.now[:danger] = t "invalid_login"
       render :new
@@ -25,7 +25,7 @@ class SessionsController < ApplicationController
   private
 
   def find_user
-    @user = @user.find_by email: params[:session][:email].downcase
+    @user = User.find_by email: params[:session][:email].downcase
     return if @user
 
     flash.now[:danger] = t "invalid_login"
