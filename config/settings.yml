@@ -7,8 +7,12 @@ rubyonrails: "https://rubyonrails.org/"
 contact: "https://www.railstutorial.org/contact"
 micheal_hartl: "https://www.michealhartl.com/"
 news: "https://news.railstutorial.org/"
+gravatar: "https://gravatar.com/emails"
 max_length_name: 50
 max_length_email: 255
 min_length_pass: 6
 validates_email_regex: !ruby/regexp '/\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i'
 check_remembered: "1"
+user_avatar_size: 80
+users_avatar_size: 50
+users_per_page: 20
