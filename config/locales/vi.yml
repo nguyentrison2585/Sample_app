@@ -1,9 +1,11 @@
 vi:
   hello: "Xin chào thế giới"
+  hi: "Xin chào"
   en: "Tiếng Anh"
   vi: "Tiếng Việt"
   app: "Ruby on Rails Tutorial Ứng dụng mẫu "
   rails_tut: "hướng dẫn học Ruby on Rails"
+  sam_app: "Ứng dụng mẫu"
   home: "Trang chủ"
   help: "Trợ giúp"
   about: "Giới thiệu"
@@ -13,7 +15,7 @@ vi:
   new_user: "Người dùng mới?"
   signup: "Đăng ký ngay!"
   login: "Đăng nhập"
-  invalid_login: "Email hoặc mật khẩu không khớp"
+  invalid_log: "Email hoặc password không khớp"
   fail: "Tạo tài khoản không thành công"
   name: "Tên"
   password: "Mật khẩu"
@@ -40,6 +42,14 @@ vi:
   delete: "xóa"
   deleted: "Người dùng đã bị xóa"
   delete_fail: "Xóa không thành công"
+  click_to_activate: "! Bấm vào đường link dưới đây để kích hoạt
+    tài khoản của bạn:"
+  acivate: "Kích hoạt"
+  check_email: "Hãy kiểm tra email của bạn để kích hoạt tài khoản"
+  activated: "Tài khoản đã kích hoạt"
+  activate_fail: "Link kích hoạt không hợp lệ"
+  message: "Tài khoản chưa được kích hoạt. Kiểm tra email để tới link kích hoạt"
+  account_activation: "Kích Hoạt Tài Khoản"
   static_pages:
     home:
       home_intro: "Trang chủ của"

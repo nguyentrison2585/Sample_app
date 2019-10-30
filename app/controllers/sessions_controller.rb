@@ -3,14 +3,8 @@ class SessionsController < ApplicationController
   def new; end
 
   def create
-    if @user.authenticate(params[:session][:password])
-      log_in @user
-      if params[:session][:remember_me] == Settings.check_remembered
-        remember @user
-      else
-        forget @user
-      end
-      redirect_back_or @user
+    if @user&.authenticate(params[:session][:password])
+      log_in_if_activated
     else
       flash.now[:danger] = t "invalid_login"
       render :new
@@ -30,5 +24,20 @@ class SessionsController < ApplicationController
 
     flash.now[:danger] = t "invalid_login"
     render :new
+  end
+
+  def log_in_if_activated
+    if @user.activated?
+      log_in @user
+      if params[:session][:remember_me] == Settings.check_remembered
+        remember @user
+      else
+        forget @user
+      end
+      redirect_back_or @user
+    else
+      flash[:warning] = t "message"
+      redirect_to root_url
+    end
   end
 end
