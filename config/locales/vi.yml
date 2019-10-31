@@ -50,6 +50,21 @@ vi:
   activate_fail: "Link kích hoạt không hợp lệ"
   message: "Tài khoản chưa được kích hoạt. Kiểm tra email để tới link kích hoạt"
   account_activation: "Kích Hoạt Tài Khoản"
+  forgot: "(quên mật khẩu)"
+  forgot_password: "Quên mật khẩu"
+  submit: "Gửi"
+  email_sent: "Email đã được với hướng dẫn đặt lại mật khẩu"
+  email_not_found: "Không tìm thấy email"
+  password_reset: "Đặt lại mật khẩu"
+  reset_password: "Đặt lại mật khẩu"
+  to_reset: "Để đặt lại mật khẩu nhấn vào đường link bên dưới:"
+  will_exprire: "Đường link sẽ hết hiệu lực trong vòng 2 giờ."
+  please_ignore: "Nếu bạn không yêu cầu đặt lại mật khẩu,
+    hãy bỏ qua email này và mật khẩu của bạn sẽ được giữ nguyên"
+  update_password: "Cập nhật mật khẩu"
+  cant_empty: "không thể trống"
+  reseted: "Mật khẩu đã được đặt lại."
+  exprired: "Yêu cầu đặt lại mật khẩu đã hết hạn"
   static_pages:
     home:
       home_intro: "Trang chủ của"

@@ -16,3 +16,4 @@ check_remembered: "1"
 user_avatar_size: 80
 users_avatar_size: 50
 users_per_page: 20
+time_exprired: 2
