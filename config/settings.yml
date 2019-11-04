@@ -11,9 +11,15 @@ gravatar: "https://gravatar.com/emails"
 max_length_name: 50
 max_length_email: 255
 min_length_pass: 6
+max_length_post: 140
 validates_email_regex: !ruby/regexp '/\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i'
 check_remembered: "1"
 user_avatar_size: 80
 users_avatar_size: 50
 users_per_page: 20
 time_exprired: 2
+posts_per_page: 10
+post_image_width_limit: 500
+post_image_height_limit: 500
+max_size_image: 5
+valid_image_types: ["image/jpeg", "image/gif", "image/png"]
