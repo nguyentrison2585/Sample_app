@@ -1,10 +1,9 @@
 class User < ApplicationRecord
+  has_many :microposts, dependent: :destroy
   attr_accessor :remember_token, :activation_token, :reset_token
 
   USER_ATTR = %i(name email password password_confirmation).freeze
   VALID_EMAIL_REGEX = Settings.validates_email_regex
-
-  scope :activated, ->{where activated: true}
 
   before_save :downcase_email
   before_create :create_activation_digest
@@ -17,6 +16,9 @@ class User < ApplicationRecord
   validates :password, presence: true,
                     length: {minimum: Settings.min_length_pass},
                     allow_nil: true
+
+  scope :activated, ->{where activated: true}
+
   has_secure_password
 
   class << self
@@ -48,6 +50,10 @@ class User < ApplicationRecord
 
   def forget
     update remember_digest: nil
+  end
+
+  def feed
+    microposts.order_by_created_at
   end
 
   def activate

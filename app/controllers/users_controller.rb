@@ -10,6 +10,8 @@ class UsersController < ApplicationController
 
   def show
     redirect_to root_url && return unless @user.activated?
+    @microposts = @user.microposts.page(params[:page])
+                       .per Settings.posts_per_page
   end
 
   def new
@@ -61,14 +63,6 @@ class UsersController < ApplicationController
 
     flash[:danger] = t "invalid_user"
     redirect_to root_url
-  end
-
-  def logged_in_user
-    return if logged_in?
-
-    store_location
-    flash[:danger] = t "please_login"
-    redirect_to login_url
   end
 
   def correct_user
