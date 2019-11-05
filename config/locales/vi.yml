@@ -68,7 +68,9 @@ vi:
   micropost: "Bài đăng"
   post_created: "Bài đăng đã được tạo"
   post_create_fail: "Tạo bài đăng không thành công"
+  micropost_feed: "Dòng bài đăng"
   posted: "Đã đăng"
+  view_my_profile: "xem hồ sơ"
   ago: "trước."
   post_size: "%{post_size} bài đăng"
   compose: "Soạn bài đăng mới..."
@@ -78,6 +80,11 @@ vi:
   valid_format: "định dạng ảnh phải hợp lệ"
   less_than: "kích thước cần nhỏ hơn 5MB"
   max_size_file: "Kích thước tối đa là 5MB. Hãy chọn file có kích thước nhỏ hơn"
+  following: "Đang theo dõi"
+  followers: "Người theo dõi"
+  follow: "Theo dõi"
+  unfollow: "Bỏ theo dõi"
+  microposts: "Bài đăng:"
   static_pages:
     home:
       home_intro: "Trang chủ của"

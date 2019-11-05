@@ -67,7 +67,9 @@ en:
   micropost: "Microposts"
   post_created: "Post created"
   post_create_fail: "Post create fail"
+  micropost_feed: "Microposts feed"
   posted: "Posted"
+  view_my_profile: "view my profile"
   ago: "ago."
   post_size: "%{post_size} microposts"
   compose: "Compose new micropost..."
@@ -77,6 +79,11 @@ en:
   valid_format: "must be a valid image format"
   less_then: "should be less than 5MB"
   max_size_file: "Maximum file size is 5MB. Please choose a smaller file."
+  following: "Following"
+  followers: "Followers"
+  follow: "Follow"
+  unfollow: "Unfollow"
+  microposts: "Microposts:"
   static_pages:
     home:
       home_intro: "This is the home page for the"

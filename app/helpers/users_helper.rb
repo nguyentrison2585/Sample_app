@@ -1,8 +1,20 @@
 module UsersHelper
-  def gravatar_for user, options = {size: Settings.user_avatar_size}
+  def gravatar_for user, options = {size: Settings.avatar_size}
     size = options[:size]
     gravatar_id = Digest::MD5.hexdigest(user.email.downcase)
     gravatar_url = "https://secure.gravatar.com/avatar/#{gravatar_id}?s=#{size}"
     image_tag(gravatar_url, alt: user.name, class: "gravatar")
+  end
+
+  def create_active_relationship
+    current_user.active_relationships.build
+  end
+
+  def load_active_relationship
+    @following = current_user.active_relationships.find_by followed_id: @user.id
+    return @following if @following
+
+    flash[:danger] = t "invalid_user"
+    redirect_to root_url
   end
 end
