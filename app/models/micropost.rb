@@ -2,6 +2,8 @@ class Micropost < ApplicationRecord
   belongs_to :user
   has_one_attached :image
 
+  delegate :name, to: :user, prefix: :user
+
   validates :user_id, presence: true
   validates :content, presence: true,
     length: {maximum: Settings.max_length_post}
@@ -11,9 +13,12 @@ class Micropost < ApplicationRecord
                    message: I18n.t("less_than")}
 
   scope :order_by_created_at, ->{order created_at: :desc}
+  scope :me_and_following, (lambda do |id|
+    where(user_id: Relationship.select_followed_ids(id))
+    .or(where user_id: id)
+  end)
 
   def display_image
-    image.variant resize_to_limit: [Settings.post_image_width_limit,
-      Settings.post_image_height_limit]
+    image.variant resize_to_limit: Settings.post_image_size
   end
 end
