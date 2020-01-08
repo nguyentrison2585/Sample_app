@@ -4,7 +4,7 @@ class StaticPagesController < ApplicationController
 
     @micropost = current_user.microposts.build
     @feed_items = Micropost.me_and_following(current_user.id)
-                           .order_by_created_at.per Settings.posts_per_page
+                           .order_by_created_at.page(params[:page]).per Settings.posts_per_page
   end
 
   def help; end

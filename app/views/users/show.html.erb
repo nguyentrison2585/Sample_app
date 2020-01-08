@@ -1,24 +1,110 @@
 <% provide :title, @user.name %>
-<div class="row">
-  <aside class="col-md-4">
-    <section class="user_info">
-      <h1>
-        <%= gravatar_for @user %>
-        <%= @user.name %>
-      </h1>
-    </section>
-  </aside>
-  <div class="col-md-8">
-    <%= render "follow_form" if logged_in? %>
-    <% if @user.microposts.any? %>
-      <h3>
-        <%= t "micropost" %>
-        (<%= @user.microposts.size %>)
-      </h3>
-      <ol class="microposts">
-        <%= render @microposts %>
-      </ol>
-      <%= paginate @microposts, theme: "twitter-bootstrap-3" %>
-    <% end %>
+<div class="now-detail-profile">
+  <div class="header-user-profile">Danh sách món ăn</div>
+  <div class="content-user-profile">
+    <div class="history-table">
+      <div class="history-table-row history-table-heading">
+        <div class="history-table-cell history-table-col1">STT</div>
+        <div class="history-table-cell history-table-col2">Tên món ăn</div>
+        <div class="history-table-cell history-table-col3">Hình ảnh</div>
+        <div class="history-table-cell history-table-col4">Giá tiền</div>
+        <div class="history-table-cell history-table-col5">Mô tả</div>
+        <div class="history-table-cell history-table-col6">Được đặt</div>
+        <div class="history-table-cell history-table-col7">Thao tác</div>
+      </div>
+      <% @microposts.each_with_index do |m, n| %>
+        <div class="history-table-row history-table-item">
+          <div class="history-table-cell history-table-col1"><%= n+1 %></div>
+          <div class="history-table-cell history-table-col2">Khoai lang nướng</div>
+          <div class="history-table-cell history-table-col3">
+            <%= image_tag "food-1.jpg" %>
+          </div>
+          <div class="history-table-cell history-table-col4">100000000 đ</div>
+          <div class="history-table-cell history-table-col5">Ngon hết chỗ nói luôn</div>
+          <div class="history-table-cell history-table-col6">10</div>
+          <div class="history-table-cell history-table-col7">
+              <button class="edit-dish-btn" data-toggle="modal"
+      data-target="#my-modal" data-backdrop="static" data-keyboard="false">
+                Sửa
+              </button>
+            <a href="" class="delete-dish">Xóa</a>
+          </div>
+        </div>
+      <% end %>
+      <%= paginate @microposts %>
+    </div>
+    <div class="dish-form">
+
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="my-modal" role="dialog">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Cập nhật món ăn</h4>
+
+      </div>
+      <%= form_with url: "", method: :patch, class: "form-horizontal", multipart: true do %>
+        <div class="modal-body">
+          <div class="form-group row">
+            <div class="col-2 col-form-label">
+              <%= label_tag "product_name", t("name") %>
+            </div>
+            <div class="col-10">
+              <%= text_field_tag "product[name]", nil, class: "form-control", required: true %>
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-2 col-form-label">
+              <%= label_tag "product_category_id", t("category") %>
+            </div>
+            <div class="col-10">
+              <%= select_tag "product[category_id]", class: "form-control" %>
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-2 col-form-label">
+              <%= label_tag "product_price", t("price") %>
+            </div>
+            <div class="col-10">
+              <%= number_field_tag "product[price]", nil, class: "form-control", min: 10, step: Settings.min_price_allow, required: true %>
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-2 col-form-label">
+              <%= label_tag "product_stock", t("stock") %>
+            </div>
+            <div class="col-10">
+              <%= number_field_tag "product[stock]", nil, class: "form-control", min: Settings.min_price_choosen, required: true %>
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-2 col-form-label">
+              <%= label_tag "product_short_description", t("short_description") %>
+            </div>
+            <div class="col-10">
+              <%= text_area_tag "product[short_description]", nil, class: "form-control", size: "3" %>
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-2 col-form-label">
+              <%= label_tag "product_image", t("image") %>
+            </div>
+            <div class="col-10">
+              <%= file_field_tag "product[image]", class: "form-control upload-img" %>
+            </div>
+          </div>
+          <div class="row">
+            <%= image_tag "restaurant-1.jpg", class: "rounded mx-auto d-block preview-img" %>
+          </div>
+        </div>
+        <div class="modal-footer justify-content-between">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-info" id="btn-product-modal-edit"><%= t "edit" %></button>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>
